@@ -603,7 +603,7 @@ Rule names starting with capital letters denote lexical rules, while rule names 
 ::: { .grammar-rule #grammar-rule-DoubleLiteral }
 **_DoubleLiteral_:**  
   ~ [[_DecDigits_](#grammar-rule-DecDigits)] `'.'` [_DecDigits_](#grammar-rule-DecDigits) [[_DoubleExponent_](#grammar-rule-DoubleExponent)]  
-  | [[_DecDigits_](#grammar-rule-DecDigits)] [[_DoubleExponent_](#grammar-rule-DoubleExponent)]
+  | [_DecDigits_](#grammar-rule-DecDigits) [_DoubleExponent_](#grammar-rule-DoubleExponent)
 :::
 ::: { .grammar-rule #grammar-rule-IntegerLiteral }
 **_IntegerLiteral_:**  

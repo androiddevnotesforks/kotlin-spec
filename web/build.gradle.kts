@@ -12,7 +12,7 @@ val buildMode = findProperty("mode")?.toString() ?: "production" // production |
 
 repositories {
     mavenCentral()
-    jcenter()
+    maven(url = "https://maven.pkg.jetbrains.space/kotlin/p/kotlin/js-externals")
 }
 
 tasks.create<Copy>("copyKatex") {
@@ -60,7 +60,7 @@ kotlin {
                 implementation(npm("katex", "0.11.1"))
                 implementation(npm("jquery", "2.2.4"))
                 implementation(npm("kotlin-playground", "1.24.2"))
-                implementation("org.jetbrains.kotlinx:kotlinx-serialization-runtime-js:0.12.0")
+                implementation("org.jetbrains.kotlinx:kotlinx-serialization-runtime-js:0.14.0")
             }
         }
     }
