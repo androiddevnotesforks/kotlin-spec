@@ -20,9 +20,6 @@ fun turnOnPermanentDevModeIfNeeded() {
 }
 
 fun init() {
-    val specTestsLoader = SpecTestsLoader()
-    val specTestsViewer = SpecTestsViewer()
-
     turnOnPermanentDevModeIfNeeded()
 
     `$`(document).ready {
@@ -30,6 +27,9 @@ fun init() {
     }
     Header.init()
 
+    val specTestsLoader = SpecTestsLoader()
+    val specTestsViewer = SpecTestsViewer()
+    
     `$`("h2, h3, h4, h5").each { _, el ->
         val idValue = `$`(el).attr("id")
         if (idValue !in SpecTestsViewer.excludedSectionsToLoadTests) {
