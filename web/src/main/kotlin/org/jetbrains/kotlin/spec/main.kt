@@ -25,7 +25,9 @@ fun init() {
 
     turnOnPermanentDevModeIfNeeded()
 
-    Sidebar.init()
+    `$`(document).ready {
+        Sidebar.init()
+    }
     Header.init()
 
     `$`("h2, h3, h4, h5").each { _, el ->
