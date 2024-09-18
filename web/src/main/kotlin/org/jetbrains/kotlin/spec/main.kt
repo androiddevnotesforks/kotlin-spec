@@ -24,11 +24,8 @@ fun init() {
 
     `$`(document).ready {
         Sidebar.init()
+        Header.init()
     }
-    Header.init()
-
-    val specTestsLoader = SpecTestsLoader()
-    val specTestsViewer = SpecTestsViewer()
     
     `$`("h2, h3, h4, h5").each { _, el ->
         val idValue = `$`(el).attr("id")
@@ -54,6 +51,9 @@ fun init() {
     }
 
     document.body?.let { `$`(it) }?.run {
+        val specTestsLoader = SpecTestsLoader()
+        val specTestsViewer = SpecTestsViewer()
+
         on("click", ".sentence.covered") { e, _ ->
             specTestsViewer.showViewer(`$`(e.currentTarget))
         }
